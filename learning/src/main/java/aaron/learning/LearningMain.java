@@ -45,7 +45,7 @@ public class LearningMain {
         network.setListeners(new ScoreIterationListener(10), new EvaluativeListener(testData, 1, InvocationType.EPOCH_END)); //Print score every 10 iterations and evaluate on test set every epoch
         network.fit(trainData, 10);
 
-        //testing2
+        //testing3
 
     }
 }

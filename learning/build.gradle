@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
 group 'org.example'
@@ -14,6 +15,13 @@ jar {
         attributes 'Main-Class': 'aaron.learning.LearningMain'
     }
 }
+shadowJar {
+    mergeServiceFiles()
+    destinationDirectory = new File("C:\\Users\\aaron\\Desktop\\stock")
+}
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "org.deeplearning4j:deeplearning4j-core:1.0.0-beta7"
+    implementation 'org.nd4j:nd4j-native-platform:1.0.0-beta7'
 }
+

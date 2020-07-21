@@ -42,10 +42,10 @@ public class LearningMain {
                 .build();
         MultiLayerNetwork network = new MultiLayerNetwork(conf);
         network.init();
-
         network.setListeners(new ScoreIterationListener(10), new EvaluativeListener(testData, 1, InvocationType.EPOCH_END)); //Print score every 10 iterations and evaluate on test set every epoch
         network.fit(trainData, 10);
-        //testing
+
+        //testing2
 
     }
 }
